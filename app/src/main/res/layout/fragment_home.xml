@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/text_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Malam, XXX"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"/>
+
+    <ImageView
+        android:id="@+id/bnilogo"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_bni_logo"
+        android:contentDescription="BNI logo"
+        app:layout_constraintTop_toBottomOf="@id/text_greeting"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingTop="8dp"
+        android:paddingStart="16dp"/>
+
+    <TextView
+        android:id="@+id/isi_saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="saldo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/bnilogo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp" />
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/balanceCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/isi_saldo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/saldo_tersedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BNI Taplus Muda | 7263-2938-2390-****"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp *********"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tarik Tunai"
+                    android:backgroundTint="#FF6600" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Setor Tunai"
+                    android:backgroundTint="#FF6600"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/shortcutLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shortcut Kamu"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/balanceCard"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="16dp"
+        android:paddingTop="5dp"/>
+
+    <GridLayout
+        android:id="@+id/shortcutGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shortcutLabel">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF6600"
+            android:text="Transfer Uang" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF6600"
+            android:text="Virtual Account" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF6600"
+            android:text="Pulsa / Data" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF6600"
+            android:text="Menu Lengkap" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/bniInsightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BNI Insight"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/shortcutGrid"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bniInsightLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_bni_promo"
+        android:contentDescription="BNI Promo 1"
+        android:layout_marginEnd="8dp"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_bni_promo_2"
+        android:contentDescription="BNI Promo 2"
+        android:layout_marginEnd="8dp"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
